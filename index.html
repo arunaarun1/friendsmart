@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html>
+<title>web site</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<style>
+div.relative {
+  position: relative;
+  
+} 
+
+div.absolute {
+  position: absolute;
+  bottom: 50px;
+  left:20px;
+}
+
+.img1{
+    transition:1.7s;
+}
+
+.img1:hover{
+     transform:scale(1.2);
+}
+p {
+     
+   
+    text-align:justify;
+
+}
+.arun{
+   
+    float:right;
+}
+
+</style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light">
+<img src="veg1.html"alt="veg" width="200" height="200">
+<img src="logo3.png"alt="veg" width="400" height="150">
+  <form class="d-flex justify-content-center">
+                <input class="form-control me-2" type="text" placeholder="Search" style="width: 300px; background-color:#F9F9F9;">
+                <button class="btn btn-dark">Search</button>
+            </form>       
+<div class="dropdown dropdown-menu-end">
+    <img src="prof.png" alt="Logo" style="width:30px;margin-left:30px">
+    <a style="text-decoration:none;color:black;cursor:pointer"  dropdown-toggle" data-bs-toggle="dropdown">
+        LOGIN
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal1">SIGN UP</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#myModal"LOGIN</a></li>
+    </ul>
+</div>
+&nbsp;&nbsp;&nbsp;
+<div class="navbar">
+    <a class="nav-link" href="#" id="cart-link">
+        <img src="cart.png" alt="Cart" style="width: 30px;">CART
+        <span id="cart-count">0</span>
+    </a>
+</div>
+</nav>
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+<div class="container-fluid justify-content-center">
+<ul class="navbar-nav">
+   <li class="nav-item">
+<a class="nav-link" href="#section1">HOME</a>
+    </li>
+<li class="nav-item">
+<a class="nav-link" href="#section2">PRODUCT</a>
+    </li>
+<li class="nav-item">
+<a class="nav-link" href="#section3">ABOUT AS</a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="#section4">CONTACT AS</a>
+    </li>
+<li class="nav-item">
+<div class="dropdown dropdown-menu-end">
+    <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+      AVAILABILITY
+    </button>
+<ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">INSTACK (30)</a></li>
+    <li><hr class="dropdown-divider"></li>
+   <li><a class="dropdown-item" href="#">OUT OF STACK(0)</a></li>
+</ul>
+</div>
+ </li>
+</nav>
+<div id="section1" class="mx-auto" style="width: 100%;">
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <ol class="carousel-indicators">
+            <li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#demo" data-bs-slide-to="1"></li>
+            <!-- Add more indicators as needed -->
+        </ol>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/vegm.html" alt="veg" height="350" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="fre.html" alt="veg" height="350" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="veg3.WEBP" alt="veg" height="350" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="VEG4.jpg" alt="veg" height="350" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="ima1.PNG" alt="veg" height="350" class="d-block w-100">
+            </div>
+            <!-- Add more carousel items as needed -->
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#demo" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#demo" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+</div>
+<script>
+    // Initialize the cart count to 0
+    let cartCount = 0;
+
+    // Function to update the cart count in the navbar
+    function updateCartCount() {
+        const cartCountElement = document.getElementById('cart-count');
+        cartCountElement.innerText = cartCount.toString();
+    }
+
+    // Add an event listener to all buttons with the "add-to-cart-button" class
+    document.addEventListener('DOMContentLoaded', function () {
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-button');
+
+        addToCartButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Increment the cart count when any button is clicked
+                cartCount++;
+                updateCartCount();
+            });
+        });
+    });
+</script>
+
+<br>
+<div class="card bg-light">
+<div class= "container d-flex bg-light">
+<h3 class="p">A diet rich in vegetables and fruits can lower blood pressure, reduce the risk of heart disease and stroke, 
+prevent some types of cancer, lower risk of eye and digestive problems, and have a positive effect upon blood sugar, which can help keep appetite in check.</h3>
+<img class="arun" src="impo.jpg" alt="veg" width="300" height="300" class="d-block">
+</div>
+</div>
+<br>
+<br>
+<div class="relative"><img src="back.PNG" alt="veg" height="350" class="d-block" style="width:100%">
+  <div class="absolute"><video width="400" height="250" controls>
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+ </video>
+</div>
+</div>
+</header>
+<div id="section2" text-white"  style="padding:50px 20px;">
+  <h1>PRODUCTS</h1>
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="tomotto.jpeg" alt="veg" class="hover rounded-4" width="250" height="250">
+    <h4 class="card-title">Tomotto(1-kg)</h4>
+    <img src="rupee.jpg" alt="veg" width="20" height="20"><b>37</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+ 
+  <div class="offcanvas offcanvas-start" id="demo">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="tomotto.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>TOMOTTO</h4>
+</th>
+</table>
+  </div>
+</div>
+ 
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/potato.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">PATATO(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>29</b>
+<div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas offcanvas-start" id="demo1">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/potato.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>PATATO</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/onion.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">ONION(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>27</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas offcanvas-start" id="demo2">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/onion.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>ONION</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/cha.jpeg" alt="veg" class="hover rounded-4" width="250" height="250">
+    <h4 class="card-title">CHSYOTE(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>25</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo3">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo3">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+    <th>
+    <img src="./img/cha.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CHSYOTE</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/Ladies.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">LADIES FINGER(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>25</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo4">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo4">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/Ladies.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>LADIES FINGER</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+ <div class="card-body">
+    <img class="img1" src="./img/chilli.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CHILLI(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>25</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo5">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo5">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/chilli.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CHILLI</h4>
+</th>
+  </div>
+</div>
+</div>
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/corrot.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CARROTS(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>25</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo6">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo6">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/cha.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CARROTS</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+
+<br>
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/ginger.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">Ginger(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>25</b>
+    <div class="container-fluid mt-3">
+  <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo7">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo7">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/ginger.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>Ginger</h4>
+</th>
+</table>
+  </div>
+</div>
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/cabage.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CABBAGE(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>35</b>
+    <div class="container-fluid mt-3">
+    <button class="btn btn-success add-to-cart-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo8">
+     ADD CART
+    </button>
+
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo8">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/cabage.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CABBAGE</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/cucumber.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CUCUMBER(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo09">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo9">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+ <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/cucumber.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CUCUMBER</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="row">
+<div class="col ">
+<div class="card" style="width:300px">
+    <div class="card-body">   <img class="img1" src="./img/PEAS.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">PEANS(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo10">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo9">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/PEAS.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>PEANS</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/drum.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">DRUMSTICK(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo11">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo10">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/drum.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>DRUMSTICK</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/betroot.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">BEETROT(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo12">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas offcanvas-start" id="demo11">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/betroot.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>BEETROT</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/papkin.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">PAPKIN(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo13">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo12">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/papkin.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>PAPKIN</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/radis.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">RADIES(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo14">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo13">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/radis.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>RADIES</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/red.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">RED PEPPER(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo15">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo14">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/red.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>RED PEPPER</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+
+<br>
+
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/pea.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">PEA(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>25</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo16">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+<div class="offcanvas offcanvas-start" id="demo15">
+<div class="offcanvas-header">
+  <h1 class="offcanvas-title">CART</h1>
+ <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/pea.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>PEA</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/carlic.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CARLIC(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>16</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo17">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo16">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/carlic.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CARLIC</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/cha.jpeg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CHSYOTE(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>30</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo18">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo17">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/cha.jpeg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CHSYOTE</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+
+
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/on.avif" alt="veg" width="250" height="250">
+    <h4 class="card-title">SAMBAR ONION(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>12</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo19">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo18">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/on.avif" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>SAMBAR ONION</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/cocount.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">COCONUT(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo20">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+
+  <div class="offcanvas offcanvas-start" id="demo19">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/cocount.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>COCONUT</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/mintleaves.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">MINI LEAVES(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo21">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo20">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/mintleaves.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>MINI LEAVES</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/curry leaves.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CURRY LEAVES(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo22">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo21">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/curry leaves.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CURRY LEAVES</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/nellikai.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">NELLIKAI(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo23">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+
+
+  <div class="offcanvas offcanvas-start" id="demo22">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/nellikai.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>NELLIKAI</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/coriander leaves.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CORIANDER(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo24">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+
+
+  <div class="offcanvas offcanvas-start" id="demo23">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/coriander leaves.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CORIANDER</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/CHOW.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CHOW(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo25">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo24">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/CHOW.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>CHOW</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/beans.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">BEANS(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo26">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo25">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/beans.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>
+  <h4>BEANS</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/malabar.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">CUCUMBER(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>32</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo27">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo26">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/malabar.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>CUCUMBER</h4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="row">
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/bottle.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">BOTTLE GOURD(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>22</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo28">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo27">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/bottle.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>BOTTLE GOURD</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/bitter.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">BIER GOURD(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>22</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo29">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo28">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/bitter.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>BIER GOURD</h4>
+</th>
+</table>
+  </div>
+</div>
+
+
+<div class="col">
+<div class="card" style="width:300px">
+    <div class="card-body">
+    <img class="img1" src="./img/kathari.jpg" alt="veg" width="250" height="250">
+    <h4 class="card-title">BRINJAL(1-kg)</h4>
+    <img src="./img/rupee.jpg" alt="veg" width="20" height="20"><b>37</b>
+    <div class="container-fluid mt-3">
+  <button type="button" class="btn btn-success add-to-cart-button" data-bs-toggle="offcanvas" data-bs-target="#demo30">
+    ADD CART
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <div class="offcanvas offcanvas-start" id="demo29">
+  <div class="offcanvas-header">
+   <h1 class="offcanvas-title">CART</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table>
+    <tr>
+     <th>
+    <img src="./img/kathari.jpg" alt="veg" width="80" height="80">
+    </th>
+<th></th>
+<th>BRINJAL4>
+</th>
+</table>
+  </div>
+</div>
+</div>
+<div id="section3" text-white"  style="padding:50px 20px;">
+<div class="container-fluid" bg-secondary justify-content-center">
+<h1 class=bg-success width="100%">ABOUT US</h1>
+<br>
+<h4 style="text-white">
+A vegetable market is a type of building or structure created and designed in various colors, materials, shapes, sizes, and styles with accurate and specific fruit and vegetables.
+Vegetable markets provide healthier food items that are fresher than the ones available in supermarkets. 
+The vendors directly come and sell in almost every neighborhood.So it is convenient for almost everybody everywhere.</h4>
+ 
+<div class="card" style="width:600px">
+<div class="card-body">
+Vegetables do not add more calories to your body. Eating a plate full of vegetables is good for your health; at the same time helps in weight management. As you eat more vegetables, we do not tend to get hungry easily.
+Most of the vegetables have anti-aging properties. Regular consumption of such vegetables ensures a young look and healthy feeling to our body. Younger looks gives us more confidence.
+Vegetables keep our biological cycle very regular. Vegetables regularize the digestive system and maintain the appetite throughout the day. This keeps us mentally and physically fresh than ever.
+The vegetables that can be added in our daily food are spinach, garlic, onions, tomatoes, carrots, green peas and many more. The more the vegetables we consume, the more the healthier we become. As in the saying, "Prevention is better than cure", having vegetables today will reduce the risk of many unexpected diseases in the future.</h4>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="section4" class="container-fluid bg-dark text-white" style="padding:100px 20px;">
+<footer>
+   <div class="container-fluid bg-dark text-white pt-5">
+      <div class="container">
+
+<div class="row">
+<div class="col-sm-4">
+<h1 style="text-white">CONTACT US</h1>
+<a class="nav-link"href="mailto:dukearunaarun@gmail.com"><span>&#9993;</span>dukearunaarun@gmail.com</a>
+<a class="nav-link" href="tel:+9688611648"><span>&#9990;</span> +91-9688611648</a>
+<img src="location.PNG" alt="loc" width="20">
+varagunarama puram<br>
+Market<br>
+surandai-627859<br><br>
+</div>
+
+<div class="col-sm-4">
+<h1 style="text-dark">COMPANY</h1>
+<a class="nav-link" href="about.html">ABOUT</a>
+</div>
+<div class="col-sm-4">
+<h1 style="text-dark">FOR YOU</h1>
+<a class="nav-link" href="contact.html">CONTACT US</a>
+<a class="nav-link" href="contact.html">Terms and Condition</a>
+<a class="nav-link" href="contact.html">Privacy Policy</a>
+</div>
+<div>
+</div>
+</div>
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">LOGIN</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+<div class="modal-body">
+     <div class="form-group mb-3 mt-3">
+     <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile number" name="mobile">
+ </div>
+
+<div class="form-group mb-3 mt-3">
+  <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+  </div>  
+  </div>
+   <!-- Modal footer -->
+   <div class="modal-footer">
+   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">login</button>
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="modal" id="myModal1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title">SIGNUP</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+<div class="modal-body">
+    <label for="username">USER Name</label><br><br>
+    <input type="text" id="username" name="username" placeholder="Your name.."><br><br>
+
+    <label for="email">Email id</label><br>
+    <input type="email" id="email" name="email" placeholder="your email.."><br><br>
+    <label for="phone number">number</label><br>
+    <input type="tel" id="number" name="number" placeholder="your number.."><br><br>
+
+
+    <label for="country">DISTRICT</label><br>
+    <select id="country" name="country"><br><br>
+      <option value="Tenkasi">Tenkasi</option>
+      <option value="Tirunelveli">Tirunelveli</option>
+      <option value="viruthunagar">viruthunagar</option>
+    </select><br><br>
+
+    <label for="subject">Address</label><br>
+    <textarea id="address" name="address" placeholder="Write address." style= "width:100""height:100px"></textarea><br><br>
+
+    <input type="submit" class="btn btn-danger" value="Submit">
+  </form>
+</div>
+   <!-- Modal footer -->
+   <div class="modal-footer">
+   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CLOSE</button>
+   </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>
